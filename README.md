@@ -6,16 +6,16 @@ Jams Inc. works with tens and tens of artists, so keeping track of their `name`,
 ![Sinatra](https://raw.githubusercontent.com/bmizerany/sinatra/work/lib/sinatra/images/404.png)
 
 ## Create & Read 📓
-In keeping tradition with [RESTful](http://www.restular.com/) routes, Jams Inc. wants you to build out the following deliverables:
+In keeping tradition with [RESTful](http://weww.restular.com/) routes, Jams Inc. wants you to build out the following deliverables:
 
-* A database of `Artists` that will allow for a `name` string, `age` integer and `bio` string. If you created your database properly, you should be able to seed the database with the given `seeds.rb` file.
+<!-- * A database of `Artists` that will allow for a `name` string, `age` integer and `bio` string. If you created your database properly, you should be able to seed the database with the given `seeds.rb` file. -->
 
-* An index page that displays the names of all the artists in your database.
+<!-- * An index page that displays the names of all the artists in your database. -->
 
-  * A nice to have feature: On the index page, clicking on the name of the artist would link me to their show page (see below).
+  <!-- * A nice to have feature: On the index page, clicking on the name of the artist would link me to their show page (see below).
 
 
-* A dynamically generated show page for a single artist that shows their `name`, `age` and `bio`.
+* A dynamically generated show page for a single artist that shows their `name`, `age` and `bio`. -->
 
 * A form to log a new artist with their `name`, `age` and `bio`. After the form is submitted, the user should be redirected to the saved artist's show page.
 
@@ -33,4 +33,4 @@ After a little celebration, your manager comes up to you and asks if you can imp
 
 Save, commit and push your code! If you have met all these deliverables, you have accomplished CRUD for the `Artist` model, which is not an easy feat. Celebrate a little! 🎉
 
-After celebrating, you might want to consider using a separate Artist controller, if you have already not implemented it. As your application grows and you have more and more models in your domain, having separate controllers will help you follow the Single Responsibility Principle. 
+After celebrating, you might want to consider using a separate Artist controller, if you have already not implemented it. As your application grows and you have more and more models in your domain, having separate controllers will help you follow the Single Responsibility Principle.

@@ -1,0 +1,22 @@
+<center>
+<form>
+  <input type="text" name="search_term">
+  <input type="submit" value="Search">
+</form>
+
+<h1>HERES A LIST OF ALL ARTISTS</h1>
+  <% Artist.all.each do |artist|  %>
+<ul>
+  <a href="/artists/<%= artist.id %>"> <%= "Name: #{artist.name}" %></a>
+<br>
+  <%= "Age: #{artist.age}" %>
+  <br>
+  <%= "Bio: #{artist.bio}" %>
+  <br>
+    <img src="http://24.media.tumblr.com/e6962be7e82fab28086b4e8ffd58c3cc/tumblr_ms4gfv79aF1rnci9zo1_500.gif" width="100" height="75" alt="" >
+
+</ul>
+  <% end %>
+
+<a href="/artists/new"> CLICK HERE TO ADD AN ARTIST</a>
+</center>
