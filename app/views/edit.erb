@@ -1,0 +1,25 @@
+<center>
+<h1>
+  This is an editing page for
+  <%=@artist.name %>
+</h1>
+<br>
+<form action="/artists/<%=@artist.id%>" method="post">
+ <input type="hidden" name="_method" value="PUT">
+  <h3>Artist Age</h3>
+  <input type="text" name="artist[age]" placeholder="<%= @artist.age %>" value="<%= @artist.age %>">
+  <br>
+  <h3>Artist Bio</h3>
+  <input type="text" name="artist[bio]" placeholder="<%= @artist.bio %>" value="<%= @artist.bio %>">
+  <br>
+  <input type="submit" name="" value="EDIT MUH STUFF!!!">
+  <br>
+  <br>
+  <img src="https://data.whicdn.com/images/192878773/original.gif" alt="">
+</form>
+<br>
+
+<a href="/artists">
+  Home Page</a>
+<br>
+</center>
