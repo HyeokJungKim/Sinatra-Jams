@@ -6,7 +6,7 @@ Instrument.destroy_all
 end
 
 10.times do
-  Instrument.create(name: Faker::Name.name, brand: Faker::Name.name)
+  Instrument.create(name: Faker::Music.instrument, brand: Faker::Music.genre)
 end
 
 puts "File has been seeded! 🍀"
