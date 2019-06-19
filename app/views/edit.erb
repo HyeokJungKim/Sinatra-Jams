@@ -1,0 +1,22 @@
+<h1> Edit Artist </h1>
+
+<form method="POST" action= "/artists/<%=@artist.id%> ">
+  <input type="hidden" name="_method" value="patch" />
+    Name: <input type="text" name="name" value="<%=@artist.name%>">
+    Age: <input type="text" name="age" value="<%=@artist.age%>">
+    Biography: <input type="text" name="bio" value="<%=@artist.bio%>">
+    <ul>
+    Instruments played: 
+    <% @instruments.each do |instrument| %>
+      <% if @artist.instruments.include?(instrument) %>
+        <li> <%=instrument.name%> <input checked type="checkbox" name="instrument[<%= instrument.id %>]" value="<%= instrument.name %>"></li>
+      <% else %>
+        <li> <%=instrument.name%> <input type="checkbox" name="instrument[<%= instrument.id %>]" value="<%= instrument.name %>"></li>
+      <% end %>
+    <% end %>
+    </ul>
+
+  <button type="submit">Submit</button>
+</form>
+
+
