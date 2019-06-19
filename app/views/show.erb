@@ -1,0 +1,17 @@
+<h1><%= @artist.name %></h1>
+<h2><%= @artist.age %></h2>
+<h2><%= @artist.bio %></h2>
+
+<ul><% @artist.instruments.each do |instrument| %>
+    <li><a href="/instruments/<%= instrument.id %>"><%= instrument.name %></a></li>
+    <% end %>
+</ul>
+
+<form method="GET" action="/artists/<%= @artist.id %>/edit">
+    <input type="submit" value="EDIT"/>
+</form>
+
+<form method="POST" action="/artists/<%= @artist.id %>">
+    <input type="hidden" name="_method" value="DELETE"/>
+    <input type="submit" value="DELETE"/>
+</form>

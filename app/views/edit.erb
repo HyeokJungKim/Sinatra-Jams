@@ -1,0 +1,17 @@
+<h1>Edit an artist</h1>
+
+<form method="POST" action="/artists/<%= @artist.id %>">
+<input id="hidden" type="hidden" name="_method" value="patch">
+    <input type="text" name="name" value="<%= @artist.name %>"/>
+    <input type="integer" name="age" value=<%= @artist.age %>>
+    <input type="text" name="bio" value="<%= @artist.bio %>"/>
+    <input type="submit" name="submit"/>
+</form>
+
+<form method="POST" action="/artists/new_session">
+<input type="hidden" name="artist_id" value="<%= @artist.id %>">
+<% @instruments.each do |instrument| %>
+    <li><%= instrument.name %>: <input type="checkbox" name="instrument_id[]" checked="<%= @artist.instruments.include?(instrument) %>" value="<%= instrument.id %>"><br></li>
+<% end %>
+<input type="submit" id="submit"/>
+</form>
