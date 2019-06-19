@@ -11,7 +11,7 @@
 <form method="POST" action="/artists/new_session">
 <input type="hidden" name="artist_id" value="<%= @artist.id %>">
 <% @instruments.each do |instrument| %>
-    <li><%= instrument.name %>: <input type="checkbox" name="instrument_id[]" value="<%= instrument.id %>"><br></li>
+    <li><%= instrument.name %>: <input type="checkbox" name="instrument_id[]" checked="<%= @artist.instruments.include?(instrument) %>" value="<%= instrument.id %>"><br></li>
 <% end %>
 <input type="submit" id="submit"/>
 </form>
