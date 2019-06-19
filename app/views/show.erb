@@ -4,7 +4,14 @@
 
 <h2>Bio: <%= @artist.bio %></h2>
 
-<a href="/artists/<%= @artist.id %>/edit">Edit</a>
+<h2> Instruments: <h2>
+<ul>
+    <% @artist.instruments.each do |instrument| %>
+    <li><a href="/instruments/<%= instrument.id %>"><%= instrument.name %></a></li>
+    <% end %>
+</ul>
+
+<h3><a href="/artists/<%= @artist.id %>/edit">Edit Profile</a></h3>
 
 <form method="POST" action="/artists/<%= @artist.id %>">
     <input type="hidden" name="_method" value="DELETE">

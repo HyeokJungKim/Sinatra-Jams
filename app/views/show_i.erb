@@ -1,0 +1,10 @@
+<h1><%= @instrument.name %></h1>
+
+<h2>Brand: <%= @instrument.brand %></h2>
+
+<h2> Artists: <h2>
+<ul>
+    <% @instrument.artists.each do |artist| %>
+    <li><a href="/artists/<%= artist.id %>"><%= artist.name %></a></li>
+    <% end %>
+</ul>
