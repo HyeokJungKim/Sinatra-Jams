@@ -1,0 +1,14 @@
+<h1>This is All the Artists in our database</h1>
+
+<a href= "/artists/new">Create an artist</a>
+
+<ul>
+    <% @artists.each do |artist|%>
+        <li>
+            <a href="/artists/<%= artist.id %>">
+            <%= artist.name%>
+            </a>
+         </li>
+    <%end%>
+
+</ul>
