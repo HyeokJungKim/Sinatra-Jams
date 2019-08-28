@@ -7,6 +7,7 @@ class ApplicationController < Sinatra::Base
   configure do
     set :public_folder, 'public'
     set :views, 'app/views'
+    set :method_override, true
   end
 
   get "/" do
@@ -32,5 +33,24 @@ class ApplicationController < Sinatra::Base
     redirect "/artist"
   end
 
+  #UPDATE
+  patch '/artist/:id' do
+    @artist = Artist.find(params[:id])
+    @artist.update(params[:artist])
+    redirect "/artist/#{@artist.id}"
+  end
+
+  #EDIT
+  get '/artist/:id/edit' do
+    @artist = Artist.find(params[:id])
+    erb :edit
+  end
+
+  #DELETE
+  delete '/artist/:id' do
+    @artist = Artist.find(params[:id])
+    @artist.destroy
+    redirect '/artist'
+  end
 
 end
