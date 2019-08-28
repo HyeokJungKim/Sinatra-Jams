@@ -1,0 +1,10 @@
+<h1> New Artist </h1>
+<form action="/artist" method="POST"> 
+    <label for="name"> Name: </label>
+        <input type="text" name="artist[name]" placeholder="Enter artist name!" id="name"> 
+    <label for="age"> Age: </label>
+        <input type="number" name="artist[age]" placeholder="Enter artist age!">
+    <label for="bio"> Bio: </label>
+        <input type="text" name="artist[bio]" placeholder="Enter artist bio!">
+    <input type="submit" value="Create Artist">
+</form>
